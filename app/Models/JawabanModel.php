@@ -3,7 +3,7 @@
 
 namespace App\Models;
 
-use Illuminate\Support\Facade\DB;
+use Illuminate\Support\Facades\DB;
 
 class JawabanModel{
 	public static function get_all(){
