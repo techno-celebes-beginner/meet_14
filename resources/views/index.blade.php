@@ -1,9 +1,5 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-</head>
-<body>
+@extends('layout.master')
+
+@section('content')
 	<?php print_r($que);?>
-</body>
-</html>
+@endsection

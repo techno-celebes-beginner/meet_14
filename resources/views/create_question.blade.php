@@ -1,9 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-</head>
-<body>
+@extends('layout.master')
+
+@section('content')
 	<form action="/pertanyaan" method="post">
 		@csrf
 		<input type="hidden" name="creator" value="1">
@@ -11,5 +8,4 @@
 		<textarea name="question_content"></textarea>
 		<input type="submit" value="Submit">
 	</form>
-</body>
-</html>
+@endsection
