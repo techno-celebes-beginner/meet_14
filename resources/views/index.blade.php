@@ -25,6 +25,9 @@
 	            <div class="content my-class-content">
 					<div class="container-fluid">
 						<div class="row">
+							<a class="btn btn-primary" href="/pertanyaan/create">Buat Pertanyaan</a>
+						</div>
+						<div class="row">
 		                	<div class="col-12 table-responsive">
 		                		<table class="table">
 		                			<thead class="thead-dark">
@@ -39,7 +42,10 @@
 		                				<tr>
 		                					<td>{{$q->question_title}}</td>
 		                					<td>{{$q->question_content}}</td>
-		                					<td></td>
+		                					<td>
+		                						<a class="btn btn-primary" href="/pertanyaan/{{ $q->question_id}}">Edit Pertanyaan</a>
+												<a class="btn btn-success" href="/jawaban/{{ $q->question_id}}">Lihat Jawaban</a>
+		                					</td>
 		                				</tr>
 		                				@endforeach
 		                			</tbody>

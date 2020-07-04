@@ -16,7 +16,7 @@ class CreateJawabanTable extends Migration
         Schema::create('answer', function (Blueprint $table) {
             $table->bigIncrements('answer_id');
             $table->integer('question_id');
-            $table->text('question_content');
+            $table->text('answer_content');
             $table->integer("creator");
             $table->timestamps();
         });

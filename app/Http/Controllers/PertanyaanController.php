@@ -23,6 +23,6 @@ class PertanyaanController extends Controller
     	$data_q['creator'] = $request->creator;
     	$new_q = PertanyaanModel::save($data_q);
 
-    	return redirect('/pertanyaan');    	
+    	return redirect('/pertanyaan');
     }
 }

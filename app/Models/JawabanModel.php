@@ -11,6 +11,11 @@ class JawabanModel{
 		return $pertanyaan;
 	}
 
+	public static function get_by_question($id){
+		$pertanyaan = DB::table('answer')->where("question_id",$id)->get();
+		return $pertanyaan;
+	}
+
 	public static function save($data){
 		$new_q = DB::table('answer')->insert($data);
 		return $new_q;
