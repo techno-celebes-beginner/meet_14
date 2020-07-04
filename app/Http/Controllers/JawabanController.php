@@ -19,6 +19,8 @@ class JawabanController extends Controller
     	$data_q['answer_content'] = $request->answer_content;
     	$data_q['question_id'] = $id;
     	$data_q['creator'] = 1;
+        $data_q['created_at'] = date("Y-m-d H:i:s");
+        $data_q['updated_at'] = date("Y-m-d H:i:s");
     	$new_q = JawabanModel::save($data_q);
 
     	return redirect('/jawaban/' . $id);

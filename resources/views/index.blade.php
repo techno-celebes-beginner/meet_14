@@ -43,8 +43,13 @@
 		                					<td>{{$q->question_title}}</td>
 		                					<td>{{$q->question_content}}</td>
 		                					<td>
-		                						<a class="btn btn-primary" href="/pertanyaan/{{ $q->question_id}}">Edit Pertanyaan</a>
+		                						<a class="btn btn-primary" href="/pertanyaan/{{ $q->question_id}}/edit">Edit Pertanyaan</a>
 												<a class="btn btn-success" href="/jawaban/{{ $q->question_id}}">Lihat Jawaban</a>
+												<form method="post" action="/pertanyaan/{{ $q->question_id}}">
+													@csrf
+													<input type="hidden" name="_method" value="delete" />
+													<button class="btn btn-danger" type="submit">Delete</button>
+												</form>
 		                					</td>
 		                				</tr>
 		                				@endforeach
