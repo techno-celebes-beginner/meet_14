@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\PertanyaanModel;
+use App\Models\JawabanModel;
 
 class PertanyaanController extends Controller
 {
@@ -14,6 +15,12 @@ class PertanyaanController extends Controller
 
     public function create(){
     	return view('create_question');
+    }
+
+    public function show($id){
+        $n = PertanyaanModel::get_by_id($id);
+        $answer = JawabanModel::get_by_question($id);
+        return view('pertanyaan-index',['que'=> $n,'answer'=>$answer]);
     }
 
     public function edit($id){

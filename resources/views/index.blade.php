@@ -40,7 +40,7 @@
 		                			<tbody>
 		                				@foreach($que as $q)
 		                				<tr>
-		                					<td>{{$q->question_title}}</td>
+		                					<td><a href="/pertanyaan/{{ $q->question_id}}">{{$q->question_title}}</a></td>
 		                					<td>{{$q->question_content}}</td>
 		                					<td>
 		                						<a class="btn btn-primary" href="/pertanyaan/{{ $q->question_id}}/edit">Edit Pertanyaan</a>
